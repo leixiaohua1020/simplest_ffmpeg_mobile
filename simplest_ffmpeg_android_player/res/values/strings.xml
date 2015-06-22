@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SFFmpegAndroidPlayer</string>
+    <string name="about_author">Lei Xiaohua</string>
+    <string name="label_url">URL</string>
+	<string name="btn_start">Start</string>
+	<string name="btn_pause">Pause</string>
+	<string name="btn_stop">Stop</string>
+
+</resources>
