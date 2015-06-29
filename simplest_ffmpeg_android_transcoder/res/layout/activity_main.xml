@@ -9,39 +9,39 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/text_label1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="Command" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editText_cmd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:ems="10"
-        android:inputType="textMultiLine" >
-
-        <requestFocus />
-    </EditText>
-
+        android:layout_alignLeft="@+id/text_label1"
+        android:layout_below="@+id/text_label1"
+        android:ems="50"
+        android:text="ffmpeg -i xxx.mkv yyy.mp4" />
+    
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/button_convert"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
-        android:text="Button" />
-
+        android:layout_alignLeft="@+id/editText_cmd"
+        android:layout_below="@+id/editText_cmd"
+        android:text="Convert" />
+            
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/button1"
+        android:layout_alignLeft="@+id/button_convert"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button_convert"
         android:layout_marginTop="14dp"
         android:text="TextView" />
+
 
 </RelativeLayout>
