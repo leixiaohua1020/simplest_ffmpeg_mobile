@@ -18,8 +18,14 @@
 package com.leixiaohua1020.sffmpegandroidtranscoder;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
 
@@ -28,10 +34,18 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
+        final EditText cmdEdittext= (EditText) this.findViewById(R.id.editText_cmd);
+        Button startButton= (Button) this.findViewById(R.id.button_start);
         
-        
+        startButton.setOnClickListener(new OnClickListener() {
+			public void onClick(View arg0){
+				String cmdline=cmdEdittext.getText().toString();
+		        String[] argv=cmdline.split(" ");
+		        Integer argc=argv.length;
+		        ffmpegcore(argc,argv);
+			}
+		});
     }
-
 
     public native int ffmpegcore(int argc,String[] argv);
     static{

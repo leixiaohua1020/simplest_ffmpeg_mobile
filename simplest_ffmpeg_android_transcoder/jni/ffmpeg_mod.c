@@ -3818,17 +3818,8 @@ static int transcode_step(void)
 
 pthread_t p_run;
 pthread_attr_t attr;
-pthread_mutex_t mutex;
-int is_stopped=1;
 
- int stopRTMP(void)
-{
-  pthread_mutex_lock(&mutex);
-  is_stopped=1;
-  printf("STOP....................................................\n");
-  pthread_mutex_unlock(&mutex);
-  return 1;
-}
+
 
 /*
  * The following code is the main loop of the file converter
@@ -3858,13 +3849,7 @@ static int transcode(void)
 
     while (!received_sigterm) {
         int64_t cur_time= av_gettime_relative();
-        pthread_mutex_lock(&mutex);
-        if(is_stopped==1)
-        { 
-           pthread_mutex_unlock(&mutex);
-           return -1;
-        }
-        pthread_mutex_unlock(&mutex);
+
         /* if 'q' pressed, exits */
         if (stdin_interaction)
             if (check_keyboard_interaction(cur_time) < 0)

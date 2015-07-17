@@ -84,12 +84,12 @@ JNIEXPORT jstring Java_com_leixiaohua1020_sffmpegandroidhelloworld_MainActivity_
 	AVOutputFormat *of_temp = av_oformat_next(NULL);
 	//Input
 	while(if_temp!=NULL){
-		sprintf(info, "%s[In ][%10s]\t%s\n", info, if_temp->name, if_temp->long_name);
+		sprintf(info, "%s[In ][%10s]\n", info, if_temp->name);
 		if_temp=if_temp->next;
 	}
 	//Output
 	while (of_temp != NULL){
-		sprintf(info, "%s[Out][%10s]\t%s\n", info, of_temp->name, of_temp->long_name);
+		sprintf(info, "%s[Out][%10s]\n", info, of_temp->name);
 		of_temp = of_temp->next;
 	}
 	//LOGE("%s", info);
@@ -126,7 +126,7 @@ JNIEXPORT jstring Java_com_leixiaohua1020_sffmpegandroidhelloworld_MainActivity_
 			sprintf(info, "%s[Other]", info);
 			break;
 		}
-		sprintf(info, "%s[%10s]\t%s\n", info, c_temp->name, c_temp->long_name);
+		sprintf(info, "%s[%10s]\n", info, c_temp->name);
 
 		
 		c_temp=c_temp->next;

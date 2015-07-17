@@ -32,6 +32,7 @@ package com.leixiaohua1020.sffmpegandroidhelloworld;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -47,6 +48,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         final TextView libinfoText = (TextView) findViewById(R.id.text_libinfo);
+        libinfoText.setMovementMethod(ScrollingMovementMethod.getInstance()); 
+        
         libinfoText.setText(configurationinfo());
         
         Button configurationButton = (Button) this.findViewById(R.id.button_configuration);
@@ -87,7 +90,6 @@ public class MainActivity extends Activity {
 		
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -110,7 +112,6 @@ public class MainActivity extends Activity {
     	System.loadLibrary("swscale-3");
     	System.loadLibrary("postproc-53");
     	System.loadLibrary("avfilter-5");
-    	System.loadLibrary("avdevice-56");
     	System.loadLibrary("avdevice-56");
     	System.loadLibrary("sffhelloworld");
     }

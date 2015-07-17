@@ -21,25 +21,25 @@
         android:layout_alignLeft="@+id/text_label1"
         android:layout_below="@+id/text_label1"
         android:ems="50"
-        android:text="ffmpeg -i xxx.mkv yyy.mp4" />
+        android:text="ffmpeg -i /storage/emulated/0/sintel.mp4 /storage/emulated/0/sintel.mkv" />
     
     <Button
-        android:id="@+id/button_convert"
+        android:id="@+id/button_start"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editText_cmd"
         android:layout_below="@+id/editText_cmd"
-        android:text="Convert" />
+        android:text="Start" />
             
     <TextView
         android:id="@+id/text_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button_convert"
+        android:layout_alignLeft="@+id/button_start"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/button_convert"
+        android:layout_below="@+id/button_start"
         android:layout_marginTop="14dp"
         android:text="TextView" />
 

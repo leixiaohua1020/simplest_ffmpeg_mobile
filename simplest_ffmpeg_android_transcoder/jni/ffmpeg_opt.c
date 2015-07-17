@@ -741,15 +741,15 @@ static void assert_file_overwrite(const char *filename)
         const char *proto_name = avio_find_protocol_name(filename);
         if (proto_name && !strcmp(proto_name, "file") && avio_check(filename, 0) == 0) {
             if (stdin_interaction && !no_file_overwrite) {
-                fprintf(stderr,"File '%s' already exists. Overwrite ? [y/N] ", filename);
-                fflush(stderr);
-                term_exit();
-                signal(SIGINT, SIG_DFL);
-                if (!read_yesno()) {
-                    av_log(NULL, AV_LOG_FATAL, "Not overwriting - exiting\n");
-                    exit_program(1);
-                }
-                term_init();
+              //  fprintf(stderr,"File '%s' already exists. Overwrite ? [y/N] ", filename);
+              //  fflush(stderr);
+              //  term_exit();
+              //  signal(SIGINT, SIG_DFL);
+              //  if (!read_yesno()) {
+              //      av_log(NULL, AV_LOG_FATAL, "Not overwriting - exiting\n");
+              //      exit_program(1);
+              //  }
+              //  term_init();
             }
             else {
                 av_log(NULL, AV_LOG_FATAL, "File '%s' already exists. Exiting.\n", filename);

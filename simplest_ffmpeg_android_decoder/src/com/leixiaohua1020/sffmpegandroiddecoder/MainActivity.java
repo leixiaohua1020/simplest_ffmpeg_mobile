@@ -20,15 +20,19 @@ package com.leixiaohua1020.sffmpegandroiddecoder;
 import android.os.Bundle;
 import android.os.Environment;
 import android.app.Activity;
+import android.text.Editable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+	
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,20 +53,14 @@ public class MainActivity extends Activity {
 		        String urltext_output=urlEdittext_output.getText().toString();
 		        String outputurl=folderurl+"/"+urltext_output;
 		        
-		        Log.e("inputurl",inputurl);
-		        Log.e("outputurl",outputurl);
-		        
-		        String info="";
+		        Log.i("inputurl",inputurl);
+		        Log.i("outputurl",outputurl);
 		    
-		        if(decode(inputurl,outputurl,info)>=0){
-		        	
-		        }
+		        decode(inputurl,outputurl);
 		        
-		        Log.e("Info",info);
 			}
 		});
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -72,7 +70,7 @@ public class MainActivity extends Activity {
     }
     
     //JNI
-    public native int decode(String inputurl, String outputurl, String info);
+    public native int decode(String inputurl, String outputurl);
     
     static{
     	System.loadLibrary("avutil-54");
@@ -82,7 +80,6 @@ public class MainActivity extends Activity {
     	System.loadLibrary("swscale-3");
     	System.loadLibrary("postproc-53");
     	System.loadLibrary("avfilter-5");
-    	System.loadLibrary("avdevice-56");
     	System.loadLibrary("avdevice-56");
     	System.loadLibrary("sffdecoder");
     }

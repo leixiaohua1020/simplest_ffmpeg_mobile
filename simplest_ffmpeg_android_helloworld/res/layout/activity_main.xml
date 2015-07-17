@@ -62,11 +62,13 @@
 
     <TextView
         android:id="@+id/text_libinfo"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/button_configuration"
         android:layout_below="@+id/button_configuration"
         android:isScrollContainer="true"
-        android:text="info" />
+        android:text="info" 
+        android:scrollbars="vertical"
+        />
 
 </RelativeLayout>

@@ -10,7 +10,6 @@
 #define LOGI(format, ...)  printf("(^_^) " format "\n", ##__VA_ARGS__)
 #endif
 
-
 #include "SDL.h"
 #include "SDL_log.h"
 #include "SDL_main.h"
@@ -20,27 +19,24 @@ const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 const int SCREEN_BPP = 32;
 
-struct SDL_Window *window = NULL;
-struct SDL_Renderer *render = NULL;
-struct SDL_Surface *bmp = NULL;
-struct SDL_Texture *texture = NULL;
-
 int main(int argc, char *argv[]) {
+	struct SDL_Window *window = NULL;
+	struct SDL_Renderer *render = NULL;
+	struct SDL_Surface *bmp = NULL;
+	struct SDL_Texture *texture = NULL;
+
     char *filepath = "/storage/emulated/0/test.bmp";
-    LOGI("natvie_SDL %s", filepath);
 
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_TIMER) == -1) {
         LOGE("SDL_Init failed %s", SDL_GetError());
     }
 
-    LOGI("SDL_CreateWindow");
-    window = SDL_CreateWindow("Hello World!", 100, 100, 640, 480,
+    window = SDL_CreateWindow("SDL HelloWorld!", 100, 100, 640, 480,
             SDL_WINDOW_SHOWN);
     if (window == NULL) {
         LOGE("SDL_CreateWindow failed  %s", SDL_GetError());
     }
 
-    LOGI("SDL_CreateRenderer");
     render = SDL_CreateRenderer(window, -1,
             SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     if (render == NULL) {
@@ -59,7 +55,7 @@ int main(int argc, char *argv[]) {
     SDL_RenderCopy(render, texture, NULL, NULL);
     SDL_RenderPresent(render);
 
-    SDL_Delay(2000);
+    SDL_Delay(10000);
 
     SDL_DestroyTexture(texture);
     SDL_DestroyRenderer(render);
