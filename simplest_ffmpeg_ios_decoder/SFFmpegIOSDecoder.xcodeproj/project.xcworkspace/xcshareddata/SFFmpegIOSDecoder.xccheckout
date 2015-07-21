@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>03ACE809-0661-457E-9729-8021CDF1E956</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SFFmpegIOSDecoder</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>98B4C8D2674B273CFF9DA4C164167751D14FBAA2</key>
+		<string>https://github.com/leixiaohua1020/simplest_ffmpeg_mobile.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>simplest_ffmpeg_ios_decoder/SFFmpegIOSDecoder.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>98B4C8D2674B273CFF9DA4C164167751D14FBAA2</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/leixiaohua1020/simplest_ffmpeg_mobile.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>98B4C8D2674B273CFF9DA4C164167751D14FBAA2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>98B4C8D2674B273CFF9DA4C164167751D14FBAA2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>simplest_ffmpeg_mobile</string>
+		</dict>
+	</array>
+</dict>
+</plist>
