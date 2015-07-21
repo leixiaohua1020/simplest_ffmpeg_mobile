@@ -22,7 +22,7 @@ simplest_ffmpeg_ios_helloworld: IOS平台下基于FFmpeg的HelloWorld程序
 simplest_ffmpeg_ios_decoder: IOS平台下最简单的基于FFmpeg的视频解码器
 simplest_ffmpeg_ios_streamer: IOS平台下最简单的基于FFmpeg的推流器
 simplest_ffmpeg_ios_transcoder: IOS平台下移植的ffmpeg.c命令行工具
-simplest_sdl_ios_helloworld: 移植FFmpeg到IOS平台的最简单程序
+simplest_sdl_ios_helloworld: 移植SDL到IOS平台的最简单程序
 
 This project contains examples about handling multi-media data
  based on FFmpeg.
