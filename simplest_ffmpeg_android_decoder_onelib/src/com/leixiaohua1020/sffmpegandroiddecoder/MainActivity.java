@@ -1,6 +1,6 @@
 /**
- * 最简单的基于FFmpeg的视频解码器-安卓
- * Simplest FFmpeg Android Decoder
+ * 最简单的基于FFmpeg的视频解码器-安卓 - 单库版
+ * Simplest FFmpeg Android Decoder - One Library
  * 
  * 雷霄骅 Lei Xiaohua
  * leixiaohua1020@126.com
@@ -32,7 +32,6 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
