@@ -8,10 +8,11 @@
  * Communication University of China / Digital TV Technology
  * http://blog.csdn.net/leixiaohua1020
  *
- * 本程序是安卓平台下最简单的基于FFmpeg的流媒体推送器。它可以将视频数据以流媒体的形式发送出去。
+ * 本程序是安卓平台下最简单的基于FFmpeg的流媒体推送器。
+ * 它可以将视频数据以流媒体的形式发送出去。
  *
- * This software is the simplest streamer based on FFmpeg in Android. It can stream video data
- * to media server.
+ * This software is the simplest streamer based on FFmpeg in Android.
+ * It can stream local media file to streaming media server (in RTMP).
  */
 
 

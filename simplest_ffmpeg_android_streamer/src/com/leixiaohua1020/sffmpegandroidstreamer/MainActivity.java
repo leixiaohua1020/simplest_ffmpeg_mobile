@@ -1,3 +1,20 @@
+/**
+ * 最简单的基于FFmpeg的推流器(RTMP)-安卓
+ * Simplest FFmpeg Android Streamer (RTMP)
+ * 
+ * 雷霄骅 Lei Xiaohua
+ * leixiaohua1020@126.com
+ * 中国传媒大学/数字电视技术
+ * Communication University of China / Digital TV Technology
+ * http://blog.csdn.net/leixiaohua1020
+ * 
+ * 本程序是安卓平台下最简单的基于FFmpeg的推流器。
+ * 它可以将视频文件以流媒体的形式推送到服务器。
+ * 
+ * This software is the simplest streamer based on FFmpeg in Android.
+ * It can stream local media file to streaming media server (in RTMP).
+ * 
+ */
 package com.leixiaohua1020.sffmpegandroidstreamer;
 
 import android.os.Bundle;
