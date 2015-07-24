@@ -4,7 +4,7 @@
 #include <jni.h>
 #include <android/log.h>
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO , "(^_^)", __VA_ARGS__)
-#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR , "(=_=)", __VA_ARGS__)
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR , "(^_^)", __VA_ARGS__)
 #else
 #define LOGE(format, ...)  printf("(>_<) " format "\n", ##__VA_ARGS__)
 #define LOGI(format, ...)  printf("(^_^) " format "\n", ##__VA_ARGS__)
