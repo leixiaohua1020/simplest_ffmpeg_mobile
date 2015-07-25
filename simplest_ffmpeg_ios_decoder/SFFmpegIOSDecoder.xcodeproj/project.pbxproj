@@ -419,7 +419,7 @@
 				);
 				OTHER_LDFLAGS = (
 					"-lavcodec",
-					"-avformat",
+					"-lavformat",
 					"-lavdevice",
 					"-lavfilter",
 					"-lavutil",
@@ -451,7 +451,7 @@
 				);
 				OTHER_LDFLAGS = (
 					"-lavcodec",
-					"-avformat",
+					"-lavformat",
 					"-lavdevice",
 					"-lavfilter",
 					"-lavutil",
