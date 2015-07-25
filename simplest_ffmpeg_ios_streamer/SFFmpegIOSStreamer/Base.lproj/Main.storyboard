@@ -44,7 +44,7 @@
                                     <action selector="clickStreamButton:" destination="BYZ-38-t0r" eventType="touchDown" id="Y44-yj-84W"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="rtmp://live.miu520.com/live/test" translatesAutoresizingMaskIntoConstraints="NO" id="WPw-7C-ekO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="rtmp://www.velab.com.cn/live/test" translatesAutoresizingMaskIntoConstraints="NO" id="WPw-7C-ekO">
                                 <rect key="frame" x="16" y="116" width="306" height="108"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
