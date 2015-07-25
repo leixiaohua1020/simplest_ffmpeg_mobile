@@ -42,7 +42,7 @@
         android:layout_below="@+id/text_label2"
         android:ems="200" 
         android:inputType="textUri"
-        android:text="rtmp://live.miu520.com/live/test"
+        android:text="rtmp://www.velab.com.cn/live/test"
         android:textColor="#ff8c00"
         />
 
