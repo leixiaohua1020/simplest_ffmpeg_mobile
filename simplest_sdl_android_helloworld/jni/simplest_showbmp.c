@@ -1,3 +1,19 @@
+/**
+ * 移植SDL到安卓平台的HelloWorld程序
+ * Simplest SDL Android Helloworld
+ *
+ * 雷霄骅 Lei Xiaohua
+ * leixiaohua1020@126.com
+ * 中国传媒大学/数字电视技术
+ * Communication University of China / Digital TV Technology
+ * http://blog.csdn.net/leixiaohua1020
+ *
+ *
+ * 本程序是移植SDL到安卓平台的最简单程序。它可以读取并显示一张BMP图片。
+ *
+ * This software is the simplest program transplant SDL2 to Android platform.
+ * It shows a BMP file on the screen.
+ */
 
 #ifdef __ANDROID__
 
@@ -13,11 +29,6 @@
 #include "SDL.h"
 #include "SDL_log.h"
 #include "SDL_main.h"
-
-//The attributes of the screen
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
-const int SCREEN_BPP = 32;
 
 int main(int argc, char *argv[]) {
 	struct SDL_Window *window = NULL;
