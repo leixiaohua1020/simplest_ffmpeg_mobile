@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="ffmpeg -i /Users/leixiaohua1020/Desktop/test.mp4 -b:v 400k -s 640x640 /Users/leixiaohua1020/Desktop/test.mov" translatesAutoresizingMaskIntoConstraints="NO" id="n42-gJ-CzL">
-                                <rect key="frame" x="16" y="49" width="412" height="123"/>
+                                <rect key="frame" x="16" y="49" width="295" height="123"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

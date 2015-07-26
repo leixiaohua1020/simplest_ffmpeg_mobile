@@ -40,11 +40,6 @@
 }
 
 
-/**
- *  创建媒体播放控制器
- *
- *  @return 媒体播放控制器
- */
 -(MPMoviePlayerController *)moviePlayer{
     if (!_moviePlayer) {
         NSString *urlStr=[[[NSBundle mainBundle]resourcePath] stringByAppendingPathComponent:@"resource.bundle/war3end.mp4"];
@@ -57,9 +52,6 @@
     return _moviePlayer;
 }
 
-/**
- *  添加通知监控媒体播放控制器状态
- */
 -(void)addNotification{
     NSNotificationCenter *notificationCenter=[NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self selector:@selector(mediaPlayerPlaybackStateChange:) name:MPMoviePlayerPlaybackStateDidChangeNotification object:self.moviePlayer];
@@ -67,11 +59,6 @@
     
 }
 
-/**
- *  播放状态改变，注意播放完成时的状态是暂停
- *
- *  @param notification 通知对象
- */
 -(void)mediaPlayerPlaybackStateChange:(NSNotification *)notification{
     switch (self.moviePlayer.playbackState) {
         case MPMoviePlaybackStatePlaying:
@@ -89,11 +76,6 @@
     }
 }
 
-/**
- *  播放完成
- *
- *  @param notification 通知对象
- */
 -(void)mediaPlayerPlaybackFinished:(NSNotification *)notification{
     NSLog(@"播放完成.%li",self.moviePlayer.playbackState);
 }
