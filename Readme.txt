@@ -23,9 +23,10 @@ simplest_ffmpeg_ios_decoder: IOS平台下最简单的基于FFmpeg的视频解码器
 simplest_ffmpeg_ios_streamer: IOS平台下最简单的基于FFmpeg的推流器
 simplest_ffmpeg_ios_transcoder: IOS平台下移植的ffmpeg.c命令行工具
 simplest_sdl_ios_helloworld: 移植SDL到IOS平台的最简单程序
+[Windows]
+simplest_ffmpeg_windowsphone_helloworld: Windows Phone平台下基于FFmpeg的HelloWorld程序
 
-This project contains examples about handling multi-media data
- based on FFmpeg.
+This project contains examples about handling multi-media data based on FFmpeg on mobile devices.
 [Android]
 simplest_android_player: Video player based on Android API
 simplest_ffmpeg_android_helloworld: Simplest HelloWorld program based on FFmpeg in Android.
@@ -41,3 +42,5 @@ simplest_ffmpeg_ios_decoder: Simplest decoder based on FFmpeg in IOS.
 simplest_ffmpeg_ios_streamer: Simplest streamer based on FFmpeg in IOS.
 simplest_ffmpeg_ios_transcoder: Transcoder transplant from ffmpeg.c in IOS.
 simplest_sdl_ios_helloworld: Simplest program based on SDL in IOS.
+[Windows]
+simplest_ffmpeg_windowsphone_helloworld: Simplest HelloWorld program based on FFmpeg in Windows Phone platform.
