@@ -143,7 +143,7 @@ JNIEXPORT jstring Java_com_leixiaohua1020_sffmpegandroidhelloworld_MainActivity_
 JNIEXPORT jstring Java_com_leixiaohua1020_sffmpegandroidhelloworld_MainActivity_avfilterinfo(JNIEnv *env, jobject obj)
 {
 	char info[40000] = { 0 };
-	av_register_all();
+	avfilter_register_all();
 	AVFilter *f_temp = (AVFilter *)avfilter_next(NULL);
 	while (f_temp != NULL){
 		sprintf(info, "%s[%10s]\n", info, f_temp->name);

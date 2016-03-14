@@ -143,7 +143,7 @@ JNIEXPORT jint JNICALL Java_com_leixiaohua1020_sffmpegandroidencoder_MainActivit
 	//pCodecCtx->codec_id =AV_CODEC_ID_HEVC;
 	pCodecCtx->codec_id = fmt->video_codec;
 	pCodecCtx->codec_type = AVMEDIA_TYPE_VIDEO;
-	pCodecCtx->pix_fmt = PIX_FMT_YUV420P;
+	pCodecCtx->pix_fmt = AV_PIX_FMT_YUV420P;
 	pCodecCtx->width = in_w;
 	pCodecCtx->height = in_h;
 	pCodecCtx->time_base.num = 1;
@@ -194,7 +194,8 @@ JNIEXPORT jint JNICALL Java_com_leixiaohua1020_sffmpegandroidencoder_MainActivit
 	pFrame = av_frame_alloc();
 	picture_size = avpicture_get_size(pCodecCtx->pix_fmt, pCodecCtx->width, pCodecCtx->height);
 	picture_buf = (uint8_t *)av_malloc(picture_size);
-	avpicture_fill((AVPicture *)pFrame, picture_buf, pCodecCtx->pix_fmt, pCodecCtx->width, pCodecCtx->height);
+	av_image_fill_arrays(pFrame->data, pFrame->linesize,picture_buf,
+		pCodecCtx->pix_fmt,pCodecCtx->width, pCodecCtx->height,1);
 
 	//Write File Header
 	avformat_write_header(pFormatCtx,NULL);
