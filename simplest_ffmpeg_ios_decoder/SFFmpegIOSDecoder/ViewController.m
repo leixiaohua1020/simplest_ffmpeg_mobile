@@ -19,7 +19,7 @@
 #import "ViewController.h"
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
-#include <libavutil/frame.h>
+#include <libavutil/imgutils.h>
 #include <libswscale/swscale.h>
 
 @interface ViewController ()
@@ -105,9 +105,9 @@
     
     pFrame=av_frame_alloc();
     pFrameYUV=av_frame_alloc();
-    out_buffer=(uint8_t *)av_malloc(avpicture_get_size(AV_PIX_FMT_YUV420P, pCodecCtx->width, pCodecCtx->height));
-    avpicture_fill((AVPicture *)pFrameYUV, out_buffer, AV_PIX_FMT_YUV420P, pCodecCtx->width, pCodecCtx->height);
-    
+    out_buffer=(unsigned char *)av_malloc(av_image_get_buffer_size(AV_PIX_FMT_YUV420P,  pCodecCtx->width, pCodecCtx->height,1));
+    av_image_fill_arrays(pFrameYUV->data, pFrameYUV->linesize,out_buffer,
+                         AV_PIX_FMT_YUV420P,pCodecCtx->width, pCodecCtx->height,1);
     packet=(AVPacket *)av_malloc(sizeof(AVPacket));
     
     img_convert_ctx = sws_getContext(pCodecCtx->width, pCodecCtx->height, pCodecCtx->pix_fmt,
