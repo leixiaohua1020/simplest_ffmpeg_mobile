@@ -147,6 +147,7 @@ JNIEXPORT jstring Java_com_leixiaohua1020_sffmpegandroidhelloworld_MainActivity_
 	AVFilter *f_temp = (AVFilter *)avfilter_next(NULL);
 	while (f_temp != NULL){
 		sprintf(info, "%s[%10s]\n", info, f_temp->name);
+		f_temp = f_temp->next;
 	}
 	//LOGE("%s", info);
 
